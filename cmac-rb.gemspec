@@ -4,7 +4,7 @@ $:.push File.expand_path('../lib', __FILE__)
 Gem::Specification.new do |s|
   
   s.name        = 'cmac-rb'
-  s.version     = CMAC::VERSION
+  # s.version     = CMAC::VERSION
   s.authors     = ['Louis Mullie']
   s.email       = ['louis.mullie@gmail.com']
   
