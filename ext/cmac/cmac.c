@@ -26,7 +26,7 @@ static void cmac_pad (unsigned char *buf, int len) {
   
 }
 
-static unsigned char cmac_left_shift(unsigned char *out, unsigned char *in, unsigned char *overflow) {
+static void cmac_left_shift(unsigned char *out, unsigned char *in, unsigned char *overflow) {
   
   int i;
 
