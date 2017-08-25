@@ -9,11 +9,13 @@ AES-CMAC achieves a security goal similar to that of HMAC. Since AES-CMAC is bas
 ###Install
 
     gem install cmac-rb
+      or
+    gem 'cmac-rb'
 
 ###Usage
 
 ```ruby
-require 'cmac-rb'
+# require 'cmac-rb'
 
 digest = CMAC::Digest.new(key)
 tag = digest.update(plaintext)
