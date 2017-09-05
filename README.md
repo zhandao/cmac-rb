@@ -13,14 +13,15 @@ AES-CMAC achieves a security goal similar to that of HMAC. Since AES-CMAC is bas
 ###Usage
 
 ```ruby
-    example = ['2b7e151628aed2a6abf7158809cf4f3c', '', 'bb1d6929e95937287fa37d129b756746']
-    key, plaintext, expected_cmac = example.map { |x| [x].pack('H*') }
+    example = ['2b7e151628aed2a6abf7158809cf4f3c', '']
+    key, plaintext = example.map { |x| [x].pack('H*') }
+    expected_cmac = bb1d6929e95937287fa37d129b756746
     
     # you can also pass a 16 bit key, instead of calling .pack()
     digest = CMAC::Digest.new(key)
     tag = digest.update(plaintext)
       
-    expect(tag).to eq expected_cmac
+    expect(tag.unpack('H*')).to eq expected_cmac
 ```
 
 ###Reference
