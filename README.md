@@ -21,7 +21,7 @@ AES-CMAC achieves a security goal similar to that of HMAC. Since AES-CMAC is bas
     digest = CMAC::Digest.new(key)
     tag = digest.update(plaintext)
       
-    expect(tag.unpack('H*')).to eq expected_cmac
+    expect(tag.unpack('H*').first).to eq expected_cmac
 ```
 
 ###Reference
